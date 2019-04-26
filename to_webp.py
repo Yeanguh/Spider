@@ -22,8 +22,8 @@ def start():
     for (dirpath, dirname, dirfile) in os.walk("./pic/"):
         print(dirpath, dirname, dirfile)
         for i in dirfile:
-            create_image(i)
-        # t = threading.Thread(target=create_image, args=(infile, index,))
+            # create_image(i)
+            t = threading.Thread(target=create_image, args=(i,))
         # t.start()
         # t.join()
         # index += 1
